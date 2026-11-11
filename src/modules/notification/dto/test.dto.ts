@@ -1,0 +1,2 @@
+class TestDto {}
+export { TestDto };

@@ -1,0 +1,31 @@
+export enum RoleType {
+	ADMINISTRATOR = 'ADMINISTRATOR',
+	SUPER_ADMINISTRATOR = 'SUPER ADMINISTRATOR',
+	JOBSEEKER = 'JOBSEEKER',
+	EMPLOYER_ADMINISTRATOR = 'EMPLOYER ADMINISTRATOR',
+	RECRUITER = 'RECRUITER'
+}
+
+export class RoleGroup {
+	static readonly ALL_ROLES: RoleType[] = [
+		RoleType.ADMINISTRATOR,
+		RoleType.SUPER_ADMINISTRATOR,
+		RoleType.JOBSEEKER,
+		RoleType.EMPLOYER_ADMINISTRATOR,
+		RoleType.RECRUITER
+	];
+	static readonly ADMINISTRATOR: RoleType[] = [RoleType.ADMINISTRATOR];
+	static readonly SUPER_ADMINISTRATOR: RoleType[] = [RoleType.SUPER_ADMINISTRATOR];
+	static readonly JOBSEEKER: RoleType[] = [RoleType.JOBSEEKER];
+	static readonly EMPLOYER_ADMINISTRATOR: RoleType[] = [RoleType.EMPLOYER_ADMINISTRATOR];
+	static readonly RECRUITER: RoleType[] = [RoleType.RECRUITER];
+	static readonly ADMIN_SUPERADMIN: RoleType[] = [RoleType.ADMINISTRATOR, RoleType.SUPER_ADMINISTRATOR];
+	static readonly EMPADMIN_RECRUITER: RoleType[] = [RoleType.EMPLOYER_ADMINISTRATOR, RoleType.RECRUITER];
+	static readonly ADMIN_SUPER_EMPADMIN: RoleType[] = [RoleType.ADMINISTRATOR, RoleType.SUPER_ADMINISTRATOR, RoleType.EMPLOYER_ADMINISTRATOR];
+	static readonly ADMIN_SUPER_EMPADMIN_RECRUITER: RoleType[] = [
+		RoleType.ADMINISTRATOR,
+		RoleType.SUPER_ADMINISTRATOR,
+		RoleType.EMPLOYER_ADMINISTRATOR,
+		RoleType.RECRUITER
+	];
+}
